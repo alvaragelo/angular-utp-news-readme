@@ -1,0 +1,13 @@
+<h2>Directorio de Empleados</h2>
+<p class="text-muted">Listado del personal de distribución y almacén.</p>
+
+<ul class="list-group mt-3">
+  @for (emp of empleados; track emp.id) {
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <div>
+        <strong>{{ emp.nombre }}</strong> - {{ emp.cargo }}
+      </div>
+      <span class="badge bg-primary rounded-pill">{{ emp.turno }}</span>
+    </li>
+  }
+</ul>
